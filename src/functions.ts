@@ -8,6 +8,7 @@ function printName(name: string): void {
   // write your code here
   console.log(name);
 }
+printName("Mohammad");
 
 /**
  * Task 2:
@@ -22,8 +23,8 @@ function printAge(birthYear: number): void {
 }
 
 // example:
-printAge(2000); // => 2025 (2025 - 2000)
-
+console.log(printAge(2000)); // => 2025 (2025 - 2000)
+console.log(printAge(1980));
 /**
  * Task 3:
  * Create a function named `printHello`
@@ -54,8 +55,10 @@ function printHello(name: string, language: LanguageType): void {
 }
 
 // example:
-printHello("Aziz", "es"); // => "Hola Aziz"
-printHello("Aziz", "fr"); // => "Bonjour Aziz"
+console.log(printHello("Aziz", "es")); // => "Hola Aziz"
+console.log(printHello("Aziz", "fr")); // => "Bonjour Aziz"
+console.log(printHello("Aziz", "en")); // => "Hello Aziz";
+console.log(printHello("Aziz", "tr")); // => "Merhaba AZIZ";
 
 /**
  * Task 4:
@@ -68,10 +71,12 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
 function printMax(x: number, y: number) {
   // write your code here
   console.log(Math.max(x, y));
+  if (x > y) console.log(`${x} is greater than ${y}.`);
+  else console.log(`${x} is smaller than ${y}.`);
 }
 
 // example:
-printMax(4, 7); // => 7
+console.log(printMax(4, 7)); // => 7
 
 // don't touch me bro!
 export { printName, printAge, printHello, printMax, LanguageType };
